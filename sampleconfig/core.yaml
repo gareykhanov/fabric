@@ -279,7 +279,14 @@ peer:
     # BCCSP (Blockchain crypto provider): Select which crypto implementation or
     # library to use
     BCCSP:
-        Default: SW
+        Default: PLUGIN
+        PLUGIN:
+            Library: /usr/lib/cpro.so
+            Config:
+                Hash: SHA2
+                Security: 256
+                FileKeyStore:
+                    KeyStore:
         # Settings for the SW crypto provider (i.e. when DEFAULT: SW)
         SW:
             # TODO: The default Hash and Security level needs refactoring to be

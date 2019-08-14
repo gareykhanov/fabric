@@ -121,8 +121,14 @@ General:
         # Valid providers are:
         #  - SW: a software based crypto provider
         #  - PKCS11: a CA hardware security module crypto provider.
-        Default: SW
-
+        Default: PLUGIN
+        PLUGIN:
+            Library: /usr/lib/cpro.so
+            Config:
+                Hash: SHA2
+                Security: 256
+                FileKeyStore:
+                    KeyStore:
         # SW configures the software based blockchain crypto provider.
         SW:
             # TODO: The default Hash and Security level needs refactoring to be
