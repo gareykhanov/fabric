@@ -128,7 +128,7 @@ General:
                 Hash: SHA2
                 Security: 256
                 FileKeyStore:
-                    KeyStore: /etc/hyperledger/fabric/msp/keystore
+                    KeyStore: /var/hyperledger/orderer/msp/keystore
 
     # Authentication contains configuration parameters related to authenticating
     # client messages
